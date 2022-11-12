@@ -1,0 +1,27 @@
+CREATE DATABASE agenda;
+
+USE agenda;
+
+CREATE TABLE familia(
+	id int PRIMARY key AUTO_INCREMENT NOT NULL,
+    parentesco varchar(200)
+);
+
+CREATE TABLE adicionar(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome varchar(200),
+    tel varchar(11),
+    id_parentesco INT,
+    
+    FOREIGN key (id_parentesco) REFERENCES familia(id)
+);
+
+INSERT INTO familia(parentesco) VALUES('mãe');
+INSERT INTO familia(parentesco) VALUES('pai');
+INSERT INTO familia(parentesco) VALUES('irmão');
+INSERT INTO familia(parentesco) VALUES('irmã');
+INSERT INTO familia(parentesco) VALUES('vó');
+INSERT INTO familia(parentesco) VALUES('vô');
+
+INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Leila Cristina', '35997444848', 1);
+INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Rogério Aparecido', '35997444848', 2);
