@@ -31,6 +31,8 @@
     <div class="container" style="margin-top:30px;">
         <div class="col-sm-2">
             <asp:Button runat="server" ID="btnCadastrar" CssClass="cadastrar" Text="Criar contato" OnClick="btnCadastrar_Click" />
+            <br />
+            <asp:Label runat="server" ID="lblQts"></asp:Label>
         </div>
 
         <div class="col-sm-8">
@@ -45,7 +47,6 @@
                     <Columns>
                         <asp:BoundField DataField="nome" HeaderText="NOME" />
                         <asp:BoundField DataField="tel" HeaderText="NÚMERO" />
-            <%--            <asp:BoundField DataField="id_parentesco" HeaderText="PARENTESCO" />--%>
                         <asp:ButtonField ButtonType="Link" CommandName="editar" ControlStyle-CssClass="btn btn-warning" Text="Editar" ItemStyle-HorizontalAlign="Center" />
                         <asp:ButtonField ButtonType="Link" CommandName="excluir" ControlStyle-CssClass="btn btn-danger" Text="Excluir" ItemStyle-HorizontalAlign="Center" />
                     </Columns>
