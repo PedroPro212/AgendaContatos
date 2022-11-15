@@ -16,12 +16,18 @@ CREATE TABLE adicionar(
     FOREIGN key (id_parentesco) REFERENCES familia(id)
 );
 
-INSERT INTO familia(parentesco) VALUES('mãe');
-INSERT INTO familia(parentesco) VALUES('pai');
-INSERT INTO familia(parentesco) VALUES('irmão');
-INSERT INTO familia(parentesco) VALUES('irmã');
-INSERT INTO familia(parentesco) VALUES('vó');
-INSERT INTO familia(parentesco) VALUES('vô');
+INSERT INTO familia(parentesco) VALUES('Não é parente');
+INSERT INTO familia(parentesco) VALUES('Mãe');
+INSERT INTO familia(parentesco) VALUES('Pai');
+INSERT INTO familia(parentesco) VALUES('Irmão');
+INSERT INTO familia(parentesco) VALUES('Irmã');
+INSERT INTO familia(parentesco) VALUES('Vó');
+INSERT INTO familia(parentesco) VALUES('Vô');
+INSERT INTO familia(parentesco) VALUES('Prima');
+INSERT INTO familia(parentesco) VALUES('Primo');
+INSERT INTO familia(parentesco) VALUES('Tia');
+INSERT INTO familia(parentesco) VALUES('Tio');
 
-INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Leila Cristina', '35997444848', 1);
-INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Rogério Aparecido', '35997444848', 2);
+INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Mathues', '35997444848', 1);
+INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Leila Cristina', '35997444848', 2);
+INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Rogério Aparecido', '35997444848', 3);
