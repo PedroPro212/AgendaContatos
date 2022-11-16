@@ -5,6 +5,7 @@
 
         body{
             background-color:#487aa1;
+            
         }
 
         .cadastrar{
@@ -20,19 +21,31 @@
                 height:35px;
                 transition: 0.1s;
                 font-size:16px;
+                border-radius:18px;
             }
 
         .table{
             background-color:#212529;
             color:white;
         }
+
+        .qts{
+            margin-top:15px;
+            width:120px;
+            height:30px;
+            background-color:white;
+            border-radius:15px;
+            padding-top:5px;
+            padding-left:23px;
+            box-shadow:1px 1px 1px black;
+        }
     </style>
 
     <div class="container" style="margin-top:30px;">
-        <div class="col-sm-2">
+        <div class="col-sm-2" style="margin-bottom:10px;">
             <asp:Button runat="server" ID="btnCadastrar" CssClass="cadastrar" Text="Criar contato" OnClick="btnCadastrar_Click" />
             <br />
-            <asp:Label runat="server" ID="lblQts"></asp:Label>
+            <div class="qts"><p>Contatos: <asp:Label runat="server" ID="lblQts" CssClass="qts_n"></asp:Label></p></div>
         </div>
 
         <div class="col-sm-8">

@@ -23,7 +23,6 @@ namespace AgendaContato.Contato
             grdContatos.DataSource = contato;
             grdContatos.DataBind();
 
-
             var reader = new MySqlCommand("SELECT COUNT(nome) AS qts FROM adicionar", connection);
             
             try
@@ -43,7 +42,6 @@ namespace AgendaContato.Contato
             }
             connection.Close();
             
-
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)

@@ -46,17 +46,25 @@ namespace AgendaContato.Contato
             var id = Request.QueryString["id"].ToString();
             try
             {
-                connection.Open();
-                var comando = new MySqlCommand($"UPDATE adicionar SET nome = @nome, tel = @tel, id_parentesco = {ddlParentesco.SelectedValue} WHERE id={id}", connection);
-                comando.Parameters.Add(new MySqlParameter("nome", txtNome.Text));
-                comando.Parameters.Add(new MySqlParameter("tel", txtTel.Text));
-                comando.ExecuteNonQuery();
-                connection.Close();
+                if((txtNome.Text == "")||(txtTel.Text == ""))
+                {
+                    SiteMaster.AlertPersonalizado(this, "É necessário os campos estarem preenchidos");
+                }
+                else
+                {
+                    connection.Open();
+                    var comando = new MySqlCommand($"UPDATE adicionar SET nome = @nome, tel = @tel, id_parentesco = {ddlParentesco.SelectedValue} WHERE id={id}", connection);
+                    comando.Parameters.Add(new MySqlParameter("nome", txtNome.Text));
+                    comando.Parameters.Add(new MySqlParameter("tel", txtTel.Text));
+                    comando.ExecuteNonQuery();
+                    connection.Close();
 
-                SiteMaster.AlertPersonalizado(this, "Cadastrado com sucesso");
+                    SiteMaster.AlertPersonalizado(this, "Cadastrado com sucesso");
 
-                txtNome.Text = "";
-                txtTel.Text = "";
+                    txtNome.Text = "";
+                    txtTel.Text = "";
+                }
+
             }
             catch
             {
