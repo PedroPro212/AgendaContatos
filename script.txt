@@ -31,3 +31,5 @@ INSERT INTO familia(parentesco) VALUES('Tio');
 INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Mathues', '35997444848', 1);
 INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Leila Cristina', '35997444848', 2);
 INSERT INTO adicionar(nome, tel, id_parentesco) VALUES('Rogério Aparecido', '35997444848', 3);
+
+SELECT COUNT(nome) FROM adicionar;
